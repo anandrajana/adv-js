@@ -82,3 +82,5 @@ var m = f2(123);
 console.log("Closure 3: "+m());
 
 
+
+
