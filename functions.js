@@ -54,3 +54,31 @@ for (var i = 0; i < colors.length; i++) {
 		console.log(i);
 		})(i), 100)
 };
+
+console.log("//Closure1//");
+
+function f1(){
+	var data = "I am dat";
+	return function(){
+		return data;
+	}
+}
+
+var n = f1();
+console.log(n() + " - n is of type: " + typeof(n));
+
+
+console.log("//Closure2//");
+
+function f2(arg){
+	var myfun = function(){
+		return arg;
+	}
+	arg++;
+	return myfun;
+}
+
+var m = f2(123);
+console.log("Closure 3: "+m());
+
+
